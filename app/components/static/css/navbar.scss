@@ -1,1 +1,12 @@
 
+nav.navbar {
+    height: 155px;
+    display: flex;
+    width: 100%;
+    padding: 0px 100px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: var(--White, #FFF);
+    box-shadow: 0px 3px 250px 0px rgba(0, 0, 0, 0.15);
+}

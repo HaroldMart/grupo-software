@@ -1,0 +1,101 @@
+
+
+@mixin Sofia-Headline-H6 {
+    font-family: Sofia Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: red;
+};
+
+
+
+@mixin Sofia-Headline-H5 {
+    font-family: Sofia Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+};
+
+@mixin Sofia-Headline-H4 {
+    font-family: Sofia Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+};
+
+@mixin Sofia-Headline-H3 {
+    font-family: Sofia Sans;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+};
+
+@mixin Sofia-Headline-H2 {
+    font-family: Sofia Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+};
+
+@mixin Sofia-Headline-H1 {
+    font-family: Sofia Sans;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 76px;
+};
+
+@mixin Sofia-Headline-H1B {
+    color: #303B44;
+    font-family: Sofia Sans;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58px;
+
+    align-self: stretch;
+    text-align: left;
+};
+
+@mixin Krub-Body-B1 {
+    color: #6A6A6A;
+    font-family: Sofia Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+
+    align-self: stretch;
+    text-align: left;
+};
+
+@mixin Krub-Body-B2 {
+    color: #6A6A6A;
+    font-family: Krub;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+
+    align-self: stretch;
+    text-align: left;
+};
+
+@mixin Krub-Body-B3 {
+    color: #6A6A6A;
+    font-family: Sofia Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    align-self: stretch;
+    text-align: left;
+}; 
