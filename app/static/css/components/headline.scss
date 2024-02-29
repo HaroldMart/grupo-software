@@ -1,0 +1,15 @@
+@import '../mixins.scss';
+
+.headline {
+    @include flex($direction: column, $justify: center, $gap: 15px);
+    max-width: 760px;
+    align-self: center;
+
+    h1.headline-title {
+     
+    }
+
+    p.headline-description {
+        text-align: center;
+    }
+}

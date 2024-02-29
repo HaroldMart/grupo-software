@@ -1,0 +1,98 @@
+@import "../../css/mixins.scss";
+
+header {
+  @include flex(
+    $justify: flex-start,
+    $align: center,
+    $direction: row,
+    $wrap: wrap,
+    $gap: 0
+  );
+
+  height: calc(100vh - 155px);
+  min-height: 560px;
+  padding: 0px 150px;
+  align-items: center;
+  align-self: stretch;
+  background: linear-gradient(
+      219deg,
+      rgba(85, 160, 225, 0.66) 0%,
+      rgba(59, 115, 233, 0.66) 100%
+    ),
+    url("../../../../public/images/background_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include large-screen() {
+    padding: 0px 75px;
+  }
+
+  @include mid-screen() {
+    padding: 0px 50px;
+  }
+
+  @include small-screen() {
+    padding: 0px 30px;
+  }
+
+  .text-container {
+    @include flex(
+      $justify: flex-start,
+      $align: center,
+      $direction: column,
+      $wrap: wrap,
+      $gap: 27px
+    );
+
+    max-width: 675px;
+    flex: 1 0 0;
+
+    .header-headline {
+      h1.title {
+        @include font($font: "Sofia Sans", $color: #fff);
+      }
+
+      p.description {
+        @include font($font: "Krub", $color: #fff);
+      }
+    }
+
+    .buttons {
+      @include flex(
+        $justify: flex-start,
+        $align: center,
+        $direction: row,
+        $wrap: wrap,
+        $gap: 27px
+      );
+
+      @include small-screen() {
+        @include flex($direction: column, $gap: 14px);
+        width: 100%;
+      }
+
+      a {
+        @include flex($justify: center, $gap: 5px);
+        padding: 13px 27px;
+        color: var(--White, #fff);
+
+        @include font($weight: 500, $height: normal);
+
+        @include small-screen() {
+          width: 100%;
+        }
+      }
+
+      .link {
+        border-radius: 3px;
+        background: linear-gradient(95deg, #8b75c9 2.36%, #506cb5 100%);
+      }
+
+      .link-outline {
+        border-radius: 3px;
+        border: 2px solid var(--White, #fff);
+      }
+    }
+  }
+}
