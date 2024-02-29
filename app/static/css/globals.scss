@@ -17,14 +17,6 @@ a {
   text-decoration: none;
 }
 
-nav.navbar {
-  height: 155px;
-  @include flex($justify: flex-start, $align: center, $direction: column);
-  padding: 0px 100px;
-  background: var(--White, #fff);
-  box-shadow: 0px 3px 250px 0px rgba(0, 0, 0, 0.15);
-}
-
 main {
   @include flex(
     $justify: flex-start,
@@ -32,6 +24,7 @@ main {
     $direction: column,
     $gap: 70px
   );
+  
   padding: 50px 0px 100px 0px;
   align-self: stretch;
 
@@ -230,79 +223,6 @@ main {
 
         @include large-screen() {
           overflow-x: auto;
-        }
-
-        .card {
-          @include flex($justify: center, $align: flex-end);
-          width: 345.569px;
-          height: 241.916px;
-          min-width: 345px;
-          position: relative;
-          border-radius: 22px;
-          box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.15);
-          overflow: hidden;
-
-          &:hover {
-            .about-project {
-              height: 170px;
-              transition: all 500ms ease-in-out;
-            }
-          }
-
-          img {
-            background-repeat: no-repeat;
-            width: 100%;
-            height: auto;
-          }
-
-          .about-project {
-            position: absolute;
-            bottom: 0;
-            @include flex(
-              $direction: column,
-              $justify: center,
-              $align: flex-start,
-              $gap: 10px
-            );
-            height: 78px;
-            padding: 12px 18px;
-            border-radius: 17px;
-            background: rgba(255, 255, 255, 0.8);
-            transition: all 500ms ease-in-out;
-
-            .heading {
-              @include flex(
-                $direction: column,
-                $justify: center,
-                $align: flex-start,
-                $gap: 3px
-              );
-              margin-top: 5px;
-
-              h5 {
-                color: #303b44;
-                text-align: center;
-                @include font($size: 18px, $weight: 600, $color: #303b44);
-                text-transform: uppercase;
-              }
-
-              p.time-published {
-                color: var(--gray-500, #8b96a2);
-                text-align: center;
-                @include font($color: var(--gray-500, #8b96a2));
-              }
-            }
-
-            .description {
-              @include font($color: #6a6a6a);
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 3;
-              align-self: stretch;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-          }
         }
       }
     }

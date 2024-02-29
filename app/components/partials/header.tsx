@@ -1,4 +1,4 @@
-import "../partials/header";
+import "../../static/css/components/header.scss";
 
 export default function Header() {
   return (

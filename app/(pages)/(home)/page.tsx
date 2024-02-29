@@ -2,12 +2,11 @@
 
 import Headline from "../../components/headline";
 import Image from "next/image";
-import { IconContext } from "react-icons";
 import { BiSolidBalloon } from "react-icons/bi";
-import { inter } from "../../utils/fonts";
 import Card from "../../components/card";
-import { projects, projectList } from "../../static/projects";
+import projects from "../../static/projects";
 import Header from "../../components/partials/header";
+import services from "../../static/services";
 
 export default function Page() {
   return (
@@ -20,45 +19,17 @@ export default function Page() {
             description="Trabajamos en las plataformas de uso cotidiano en el mercado laboral como proyectos webs, mobil y programas de escritorio para asi ajustarnos a lo que necesite el cliente."
           />
           <ul className="list-items">
-            <li className="item">
-              <div className="icon">
-                <BiSolidBalloon />
-              </div>
-              <div className="item-description">
-                <h5 className="headline">Desarrollo Web</h5>
-                <p className="description">
-                  Llevando a cabo webs dinamicas y atracticas para que asi
-                  atraigas a tu publico a interactuar con tus productos y/o
-                  servicios.
-                </p>
-              </div>
-            </li>
-            <li className="item">
-              <div className="icon">
-                <BiSolidBalloon />
-              </div>
-              <div className="item-description">
-                <h5 className="headline">Aplicaciones mobiles</h5>
-                <p className="description">
-                  Actualmente las aplicaciones mobiles son muy utilizadas en la
-                  vida cotidiana de las personas asi que si nos prefieres
-                  podriamos adentrar tu idea dentro de esas vidas.
-                </p>
-              </div>
-            </li>
-            <li className="item">
-              <div className="icon">
-                <BiSolidBalloon />
-              </div>
-              <div className="item-description">
-                <h5 className="headline">Programas de escritorio</h5>
-                <p className="description">
-                  Utilizando programas para desarrollar programas de escritorios
-                  rapidos, dinamicos y faciles de manejar por usted para que su
-                  equipo se familiarize rapido con el.
-                </p>
-              </div>
-            </li>
+            {services.map((service) => (
+              <li className="item" key={service.service}>
+                <div className="icon">
+                  <BiSolidBalloon />
+                </div>
+                <div className="item-description">
+                  <h5 className="headline">{service.service}</h5>
+                  <p className="description">{service.description}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
         <Image
@@ -172,7 +143,7 @@ export default function Page() {
         <div className="content">
           <div className="empty"></div>
           <div className="projects-preview">
-            {projectList.map((project) => (
+            {projects.map((project) => (
               <Card
                 key={project.title}
                 image={project.image}

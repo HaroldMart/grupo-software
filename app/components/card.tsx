@@ -1,3 +1,5 @@
+import '../static/css/components/card.scss';
+
 export default function Card({image, title, date, description} : {image: string, title: string, date: string, description: string}) {
     return(
         <a href="#" className="card">

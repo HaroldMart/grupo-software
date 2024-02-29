@@ -32,6 +32,4 @@ const projects: Project[] = [
 },
 ]
 
-const projectList: Project[] = projects;
-
-export { projects, projectList };
+export default projects;

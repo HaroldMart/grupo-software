@@ -73,7 +73,7 @@ header {
       }
 
       a {
-        @include flex($justity: center, $gap: 5px);
+        @include flex($justify: center, $gap: 5px);
         padding: 13px 27px;
         color: var(--White, #fff);
 
