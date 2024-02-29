@@ -1,4 +1,4 @@
-import "../static/css/components/headline.scss";
+import '../static/css/components/headline.scss';
 
 export default function Headline({ title, description}: {title:string, description:string}) {
     return (

@@ -1,4 +1,4 @@
-import "../../static/css/components/header.scss";
+import '../../static/css/components/header.scss';
 
 export default function Header() {
   return (
@@ -6,7 +6,7 @@ export default function Header() {
       <div className="text-container">
         <div className="header-headline">
           <h1 className="title">
-            Let's start coding and make your idea a reality
+            Let&apos;s start coding and make your idea a reality
           </h1>
           <p className="description">
             Group of developers ready to collaborate in your business idea.
