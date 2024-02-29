@@ -1,0 +1,29 @@
+@import './mixins.scss';
+
+.headline {
+    display: flex;
+    max-width: 760px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    align-self: center;
+
+    h1.headline-title {
+        @include Sofia-Headline-H1B;
+        text-align: center;
+
+        @include large-screen() {
+            @include Sofia-Headline-H2();
+        }
+
+        @include small-screen() {
+            @include Sofia-Headline-H3();
+        }
+    }
+
+    p.headline-description {
+        @include Krub-Body-B2;
+        text-align: center;
+    }
+}

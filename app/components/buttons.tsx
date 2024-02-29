@@ -1,4 +1,4 @@
-import "./static/css/button.scss";
+import "../static/css/button.scss";
 
 export default function Button() {
     return (

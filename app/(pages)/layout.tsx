@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../components/static/globals.scss";
+import "../static/css/components/globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
       </body>
     </html>
   );
