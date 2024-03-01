@@ -50,11 +50,13 @@ header {
 
     .header-headline {
       h1.title {
-        @include font($font: "Sofia Sans", $color: #fff);
+        font-family: "Sofia Sans";
+        @include font($color: #fff);
       }
 
       p.description {
-        @include font($font: "Krub", $color: #fff);
+        font-family: "Krub";
+        @include font($color: #fff);
       }
     }
 
@@ -76,6 +78,7 @@ header {
         @include flex($justify: center, $gap: 5px);
         padding: 13px 27px;
         color: var(--White, #fff);
+        font-family: "Inter";
 
         @include font($weight: 500, $height: normal);
 

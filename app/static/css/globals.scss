@@ -19,7 +19,8 @@ a {
 // Home page
 
 main {
-  @include font($font: "DM Sans", $size: 16px, $spacing: 0.1px, $weight: 400);
+  font-family: "DM Sans";
+  @include font($size: 16px, $spacing: 0.1px, $weight: 400);
   @include flex(
     $justify: flex-start,
     $align: flex-start,
@@ -55,8 +56,8 @@ main {
     div {
       .headline {
         h1.headline-title {
+          font-family:  "Sofia Sans";
           @include font(
-            $font: "Sofia Sans",
             $size: 48px,
             $weight: 600,
             $spacing: 0.04px
@@ -71,8 +72,8 @@ main {
           }
         }
         p.headline-description {
+          font-family: "Krub";
           @include font(
-            $font: "Krub",
             $size: 18px,
             $weight: 500,
             $spacing: 0.2px
@@ -182,8 +183,8 @@ main {
             var(--White, #fff);
 
           p {
+            font-family: "Inter";
             @include font(
-              $font: "Inter",
               $size: 16px,
               $spacing: 0.1px,
               $height: 20px,
@@ -268,12 +269,14 @@ main {
         );
 
         h1 {
+          font-family: "Sofia Sans";
           color: #488ae6 !important;
-          @include font($font: "Sofia Sans", $size: 36px, $weight: 700);
+          @include font($size: 36px, $weight: 700);
         }
 
         p {
-          @include font($font: "Krub", $size: 16px);
+          font-family: "Krub";
+          @include font($size: 16px);
         }
       }
     }
@@ -331,8 +334,8 @@ main {
           );
 
           h4 {
+            font-family:  "Sofia Sans";
             @include font(
-              $font: "Sofia Sans",
               $size: 28px,
               $weight: 600,
               $color: #303b44
@@ -347,8 +350,8 @@ main {
           }
 
           p {
+            font-family: "Krub";
             @include font(
-              $font: "Krub",
               $size: 16px,
               $weight: 400,
               $color: #6a6a6a
@@ -368,15 +371,19 @@ main {
 // Services page
 
 .services {
-  @include font($font: "DM Sans", $size: 16px, $spacing: 0.1px, $weight: 400);
+  font-family: "DM Sans";
+  @include font($size: 12px, $spacing: 0.1px, $weight: 200);
+ 
   @include flex($justify: center, $direction: column, $gap: 20px);
 
   .container-services {
+    color: green;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 
     .service {
+      
       background-color: rgb(31, 6, 70);
       @include flex($justify: center, $wrap: wrap, $gap: 20px);
       padding: 1rem;
@@ -384,6 +391,7 @@ main {
   }
 
   .client-testimonials {
+    @include font($spacing: 0.1px, $weight: 200);
     //   height: 600px;
    
 
@@ -400,7 +408,8 @@ main {
   }
 
   .questions {
-    background-color: red;
+    font-family: "DM Sans";
+    @include font($spacing: 0.1px, $weight: 200);
     @include flex($justify: space-evenly);
     width: 100%;
   }
