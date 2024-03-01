@@ -12,6 +12,20 @@ $colors: (
   "violet": violet,
 );
 
+$blacks: (
+  "50": rgb(156, 156, 156),
+  "100": rgb(100, 100, 100),
+  "200": rgb(50, 50, 50),
+  "300": rgb(0, 0, 0),
+  "400": rgb(10, 10, 10),
+  "500": rgb(20, 20, 20),
+  "600": rgb(30, 30, 30),
+  "700": rgb(40, 40, 40),
+  "800": rgb(50, 50, 50),
+  "900": rgb(60, 60, 60),
+);
+
+
 $fonts: (
   "font-1": "Inter",
   "font-2": "Archivo",
@@ -63,14 +77,12 @@ $shadows: (
 }
 
 @mixin font(
-  $font: "Inter",
   $size: 16px,
   $spacing: 0.1px,
   $height: 20px,
   $weight: 400,
   $color: map-get($colors, "gray")
 ) {
-  font-family: map-get($fonts, $font) !important;
   letter-spacing: $spacing !important;
   color: $color !important;
   font-style: normal !important;

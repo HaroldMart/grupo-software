@@ -2,7 +2,6 @@
 @import "../css/mixins.scss";
 
 * {
-  @include font($font: "DM Sans", $size: 16px, $spacing: 0.1px, $weight: 400);
   box-sizing: border-box;
   scroll-behavior: smooth;
   margin: 0;
@@ -17,14 +16,17 @@ a {
   text-decoration: none;
 }
 
+// Home page
+
 main {
+  @include font($font: "DM Sans", $size: 16px, $spacing: 0.1px, $weight: 400);
   @include flex(
     $justify: flex-start,
     $align: flex-start,
     $direction: column,
     $gap: 70px
   );
-  
+
   padding: 50px 0px 100px 0px;
   align-self: stretch;
 
@@ -360,3 +362,48 @@ main {
     }
   }
 }
+
+// About us page
+
+// Services page
+
+.services {
+  @include font($font: "DM Sans", $size: 16px, $spacing: 0.1px, $weight: 400);
+  @include flex($justify: center, $direction: column, $gap: 20px);
+
+  .container-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+
+    .service {
+      background-color: rgb(31, 6, 70);
+      @include flex($justify: center, $wrap: wrap, $gap: 20px);
+      padding: 1rem;
+    }
+  }
+
+  .client-testimonials {
+    //   height: 600px;
+   
+
+    img {
+      width: 100%;
+    }
+    //   background-image: url('/public/images/mountain.jpg');
+
+    //   background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+
+  .questions {
+    background-color: red;
+    @include flex($justify: space-evenly);
+    width: 100%;
+  }
+}
+
+// Contact us page
