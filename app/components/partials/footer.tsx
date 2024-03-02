@@ -1,5 +1,9 @@
+import "../../static/css/partials/footer.scss";
+
 export function Footer() {
     return(
-        <div>Footer</div>
+        <footer>
+            Este es el footer
+        </footer>
     )
 }

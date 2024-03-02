@@ -2,361 +2,363 @@
 @import "../css/mixins.scss";
 
 * {
-  @include font($font: "DM Sans", $size: 16px, $spacing: 0.1px, $weight: 400);
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+h1 {
+    @include font($size: 64px, $height: 76px, $weight: 700);
+}
+
+h2 {
+    @include font($size: 36px, $height: 64px);
+}
+
+h3 {
+    @include font($size: 28px, $height: 36px, $weight: 600);
+}
+
+h4 {
+    @include font($size: 24px, $height: 32px, $weight: 600);
+}
+
+h5 {
+    @include font($size: 20px, $height: 28px, $weight: 600);
+}
+
+h6 {
+    @include font($size: 16px, $height: 20px, $weight: 500);
 }
 
 main {
-  @include flex(
-    $justify: flex-start,
-    $align: flex-start,
-    $direction: column,
-    $gap: 70px
-  );
-  
-  padding: 50px 0px 100px 0px;
-  align-self: stretch;
+    @include flex($justify: flex-start,
+        $align: flex-start,
+        $direction: column,
+        $gap: 70px);
 
-  section {
-    @include flex(
-      $justify: center,
-      $align: center,
-      $direction: column,
-      $gap: 50px
-    );
-    padding: 0px 150px;
+    padding: 50px 0px 100px 0px;
     align-self: stretch;
 
-    @include large-screen() {
-      padding: 0px 75px;
-    }
-
-    @include mid-screen() {
-      padding: 0px 50px;
-    }
-
-    @include small-screen() {
-      padding: 0px 30px;
-    }
-
-    div {
-      .headline {
-        h1.headline-title {
-          @include font(
-            $font: "Sofia Sans",
-            $size: 48px,
-            $weight: 600,
-            $spacing: 0.04px
-          );
-
-          @include large-screen() {
-            @include font($size: 36px);
-          }
-
-          @include small-screen() {
-            @include font($size: 24px);
-          }
-        }
-        p.headline-description {
-          @include font(
-            $font: "Krub",
-            $size: 18px,
-            $weight: 500,
-            $spacing: 0.2px
-          );
-        }
-      }
-    }
-  }
-
-  .section-1 {
-    @include flex($direction: row);
-
-    @include large-screen() {
-      flex-wrap: wrap;
-    }
-
-    .container {
-      @include flex($direction: column, $gap: 50px);
-
-      .headline {
-        width: 100% !important;
-      }
-
-      ul.list-items {
-        @include flex($direction: column, $gap: 27px);
-        max-width: 487px;
-        gap: 27px;
-
-        li.item {
-          @include flex($align: center);
-          gap: 14px;
-
-          @include small-screen() {
-            @include flex($direction: column);
-          }
-
-          .icon {
-            @include flex($align: center, $gap: 10px);
-            width: 81.576px;
-            height: 81.576px;
-            border-radius: 5px;
-            background: var(--White, #fff);
-            box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
-
-            box-icons {
-              width: 32px;
-              height: 32px;
-            }
-          }
-
-          .item-description {
-            @include font();
-            @include flex($direction: column, $gap: 3px);
-            padding: 9px 0px;
-
-            .headline {
-              color: #303b44;
-              align-self: stretch;
-
-              @include small-screen() {
-                align-items: center;
-              }
-            }
-
-            .description {
-              color: #8d8d8d;
-              font-weight: 300;
-              align-self: stretch;
-
-              @include small-screen() {
-                text-align: center;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .shape {
-      width: 100%;
-      max-width: 588px;
-      min-width: min(100%, 300px);
-      height: auto;
-    }
-  }
-
-  .section-2 {
-    .container {
-      ul.list-items {
-        li.item {
-          @include small-screen() {
-            @include flex($direction: row);
-          }
-        }
-      }
-
-      .play-video-button {
-        @include flex($align: center, $gap: 15px);
-
-        .icon {
-          @include flex($direction: column, $align: center);
-
-          width: 60px;
-          height: 60px;
-          border-radius: 30px;
-          background: linear-gradient(219deg, #55a0e1 0%, #3b73e9 100%),
-            var(--White, #fff);
-
-          p {
-            @include font(
-              $font: "Inter",
-              $size: 16px,
-              $spacing: 0.1px,
-              $height: 20px,
-              $weight: 400,
-              $color: map-get($colors, "gray")
-            );
-            align-self: center;
-          }
-        }
-      }
-    }
-  }
-
-  .section-3 {
-    .content {
-      @include flex(
-        $justify: center,
-        $align: flex-start,
-        $gap: 28px,
-        $wrap: wrap
-      );
-
-      .empty {
-        height: 511.831px;
-        min-width: min(330px, 100%);
-        max-width: 380px;
-        flex: 1 0 0;
-        border-radius: 36px;
-        background: #d9d9d9;
-      }
-
-      .projects-preview {
-        @include flex(
-          $justify: center,
-          $align: flex-start,
-          $gap: 28px,
-          $wrap: wrap
-        );
+    section {
+        @include flex($justify: center,
+            $align: center,
+            $direction: column,
+            $gap: 50px);
+        padding: 0px 150px;
+        align-self: stretch;
 
         @include large-screen() {
-          overflow-x: auto;
+            padding: 0px 75px;
         }
-      }
+
+        @include mid-screen() {
+            padding: 0px 50px;
+        }
+
+        @include small-screen() {
+            padding: 0px 30px;
+        }
+
+        div {
+            .headline {
+                h1.headline-title {
+                    @include font($font: "Sofia Sans",
+                        $size: 48px,
+                        $weight: 600,
+                        $spacing: 0.04px);
+
+                    @include large-screen() {
+                        @include font($size: 36px);
+                    }
+
+                    @include small-screen() {
+                        @include font($size: 24px);
+                    }
+                }
+
+                p.headline-description {
+                    @include font($font: "Krub",
+                        $size: 18px,
+                        $weight: 500,
+                        $spacing: 0.2px);
+                }
+            }
+        }
     }
-  }
 
-  .banner-1 {
-    @include flex(
-      $justify: center,
-      $align: center,
-      $direction: column,
-      $wrap: wrap,
-      $gap: 50px 0
-    );
+    .section-1 {
+        @include flex($direction: row);
 
-    padding: 75px 150px;
-    background: #eff6fe;
-
-    .item {
-      @include flex(
-        $justify: center,
-        $align: center,
-        $direction: column,
-        $wrap: wrap,
-        $gap: 14px
-      );
-
-      min-width: 200px;
-      max-width: 285px;
-
-      img {
-        width: 50px;
-        height: 50px;
-      }
-
-      .stadistic {
-        @include flex(
-          $justify: center,
-          $direction: column,
-          $wrap: wrap,
-          $gap: 14px
-        );
-
-        h1 {
-          color: #488ae6 !important;
-          @include font($font: "Sofia Sans", $size: 36px, $weight: 700);
+        @include large-screen() {
+            flex-wrap: wrap;
         }
 
-        p {
-          @include font($font: "Krub", $size: 16px);
+        .container {
+            @include flex($direction: column, $gap: 50px);
+
+            .headline {
+                width: 100% !important;
+            }
+
+            ul.list-items {
+                @include flex($direction: row, $gap: 27px);
+
+                li {
+                    // @include flex($align: center, $direction: column, $justify: space-between);
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 14px;
+
+                    @include small-screen() {
+                        @include flex($direction: column);
+                    }
+
+                    .item-icon {
+                        background-color: map-get($map: $grays, $key: "50");
+                        padding: 24px;
+                        border-radius: 12px;
+                        width: -moz-fit-content;
+                        width: fit-content;
+                    }
+
+                    h5 {
+                        color: #222222;
+                        @include font(
+                            $color: map-get($grays, "950"),
+                            $size: 18px,
+                            $height: 28px,
+                            $weight: 600
+                        );
+                    }
+
+                    p {
+                        @include font($size: 14px);
+                    }
+
+                    a {
+                        width: -moz-fit-content;
+                        width: fit-content;
+                        padding: 16px 24px;
+                        border-radius: 50px;
+
+                        @include font($color: map-get($violets, "500"), $size: 16px);
+                        @include flex($gap: 10px);
+
+                        transition: all 250ms ease-in-out;
+
+                        &:hover {
+                            background-color: map-get($map: $violets, $key: "500");
+                            color: #fff !important;
+
+                            .icon {
+                                fill: #fff !important;
+                            }
+                        }
+                    }
+
+                }
+            }
         }
-      }
+
+        .shape {
+            width: 100%;
+            max-width: 588px;
+            min-width: min(100%, 300px);
+            height: auto;
+        }
     }
-  }
 
-  .section-4 {
-    @include flex(
-      $justify: center,
-      $align: center,
-      $direction: row,
-      $wrap: wrap,
-      $gap: 50px
-    );
+    .section-2 {
+        .container {
+            ul.list-items {
+                li.item {
+                    @include small-screen() {
+                        @include flex($direction: row);
+                    }
+                }
+            }
 
-    ul.container {
-      @include flex(
-        $justify: center,
-        $align: flex-start,
-        $direction: row,
-        $wrap: wrap,
-        $gap: 50px
-      );
+            .play-video-button {
+                @include flex($align: center, $gap: 15px);
 
-      li.item {
-        @include flex(
-          $justify: flex-start,
-          $align: flex-start,
-          $direction: column,
-          $wrap: wrap,
-          $gap: 14px
-        );
+                .icon {
+                    @include flex($direction: column, $align: center);
 
-        .image {
-          @include flex(
-            $justify: center,
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 30px;
+                    background: linear-gradient(219deg, #55a0e1 0%, #3b73e9 100%),
+                        var(--White, #fff);
+
+                    p {
+                        @include font($font: "Inter",
+                            $size: 16px,
+                            $spacing: 0.1px,
+                            $height: 20px,
+                            $weight: 400,
+                            $color: map-get($colors, "gray"));
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-3 {
+        .content {
+            @include flex($justify: center,
+                $align: flex-start,
+                $gap: 28px,
+                $wrap: wrap);
+
+            .empty {
+                height: 511.831px;
+                min-width: min(330px, 100%);
+                max-width: 380px;
+                flex: 1 0 0;
+                border-radius: 36px;
+                background: #d9d9d9;
+            }
+
+            .projects-preview {
+                @include flex($justify: center,
+                    $align: flex-start,
+                    $gap: 28px,
+                    $wrap: wrap);
+
+                @include large-screen() {
+                    overflow-x: auto;
+                }
+            }
+        }
+    }
+
+    .banner-1 {
+        width: 100%;
+        padding: 75px 0px;
+        background: #eff6fe;
+        @include flex($justify: space-evenly,
             $align: center,
             $direction: row,
             $wrap: wrap,
-            $gap: 10px
-          );
+            $gap: 50px 0);
 
-          width: 80px;
-          height: 80px;
-          border-radius: 6px;
-          background: #d9f3ff;
+        .item {
+            @include flex($justify: center,
+                $align: center,
+                $direction: column,
+                $wrap: wrap,
+                $gap: 14px);
+
+            min-width: 200px;
+            max-width: 285px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .stadistic {
+                @include flex($justify: center,
+                    $direction: column,
+                    $wrap: wrap,
+                    $gap: 14px);
+
+                h1 {
+                    @include font ($font: "font-3",
+                        $list: $violets,
+                        $color: '400',
+                        $size: 36px,
+                        $weight: 400);
+                }
+
+                p {
+                    @include font ($font: "font-2",
+                        $list: $grays,
+                        $color: '500',
+                        $size: 18px,
+                        $weight: 300);
+                }
+            }
         }
-
-        .cont {
-          @include flex(
-            $justify: flex-start,
-            $align: flex-start,
-            $direction: column,
-            $wrap: wrap,
-            $gap: 6px
-          );
-
-          h4 {
-            @include font(
-              $font: "Sofia Sans",
-              $size: 28px,
-              $weight: 600,
-              $color: #303b44
-            );
-
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            align-self: stretch;
-          }
-
-          p {
-            @include font(
-              $font: "Krub",
-              $size: 16px,
-              $weight: 400,
-              $color: #6a6a6a
-            );
-
-            align-self: stretch;
-            letter-spacing: 0.1px;
-          }
-        }
-      }
     }
-  }
+
+    .section-4 {
+        @include flex($justify: center,
+            $align: center,
+            $direction: row,
+            $wrap: wrap,
+            $gap: 50px);
+
+        ul.container {
+            @include flex($justify: center,
+                $align: flex-start,
+                $direction: row,
+                $wrap: wrap,
+                $gap: 50px);
+
+            li.item {
+                @include flex($justify: flex-start,
+                    $align: flex-start,
+                    $direction: column,
+                    $wrap: wrap,
+                    $gap: 14px);
+
+                .image {
+                    @include flex($justify: center,
+                        $align: center,
+                        $direction: row,
+                        $wrap: wrap,
+                        $gap: 10px);
+
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 6px;
+                    background: #d9f3ff;
+                }
+
+                .cont {
+                    @include flex($justify: flex-start,
+                        $align: flex-start,
+                        $direction: column,
+                        $wrap: wrap,
+                        $gap: 6px);
+
+                    h4 {
+                        @include font($font: "Sofia Sans",
+                            $size: 28px,
+                            $weight: 600,
+                            $color: #303b44);
+
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        align-self: stretch;
+                    }
+
+                    p {
+                        @include font($font: "Krub",
+                            $size: 16px,
+                            $weight: 400,
+                            $color: #6a6a6a);
+
+                        align-self: stretch;
+                        letter-spacing: 0.1px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -5,11 +5,11 @@
     max-width: 760px;
     align-self: center;
 
-    h1.headline-title {
-     
+    h1{
+        @include font($font: 'font-3', $list: $violets, $color: '900', $size: 50px,  $height: 58px, $spacing: 0px, $weight: 400);
     }
 
-    p.headline-description {
+    p {
         text-align: center;
     }
 }
