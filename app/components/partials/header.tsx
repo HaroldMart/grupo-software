@@ -1,4 +1,4 @@
-import "../../static/css/components/header.scss";
+import '../../static/css/components/header.scss';
 import Image from "next/image";
 import { FaPlayCircle } from "react-icons/fa";
 
