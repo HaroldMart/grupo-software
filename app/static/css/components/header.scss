@@ -1,95 +1,86 @@
 @import "../../css/mixins.scss";
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
-// @include font($font: 'font-3', $color: "50", $size: 64px, $height: 76px, $spacing: 0.1px, $weight: 700);
+header {
+  @include flex(
+    $justify: flex-start,
+    $align: center,
+    $direction: row,
+    $wrap: wrap,
+    $gap: 0
+  );
 
-.hero-section {
-    // Estilos para la sección hero
-    display: grid;
-    align-items: center;
-    grid-template-columns: 60% 1fr;
-    height: 90vh;
+  height: calc(100vh - 155px);
+  min-height: 560px;
+  padding: 0px 150px;
+  align-items: center;
+  align-self: stretch;
+  background: linear-gradient(
+      219deg,
+      rgba(85, 160, 225, 0.66) 0%,
+      rgba(59, 115, 233, 0.66) 100%
+    ),
+    url("../../../../public/images/background_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    .hero-description {
-        // Estilos para la descripción del héroe
-        width: 100%;
-        padding: 0 125px;
+  @include large-screen() {
+    padding: 0px 75px;
+  }
 
+  @include mid-screen() {
+    padding: 0px 50px;
+  }
 
-        .hero-tagline {
-            // Estilos para la línea de etiqueta del héroe
-            background-color: map-get($map: $violets, $key: "50");
-            width: -moz-fit-content;
-            width: fit-content;
-            border-radius: 20px;
-            padding: 3px 15px 3px 3px;
-            margin-bottom: 10px;
-            @include font($font: 'font-1', $color: "800", $size: 14px, $height: 32px, $spacing: 0.1px, $weight: 400);
+  @include small-screen() {
+    padding: 0px 30px;
+  }
 
-            span {
-                background-color: map-get($map: $violets, $key: "600");
-                padding: 5px 10px;
-                border-radius: 15px;
-                @include font($color: "50", $size: 14px)
-            }
-        }
+  .text-container {
+    @include flex(
+      $justify: flex-start,
+      $align: center,
+      $direction: column,
+      $wrap: wrap,
+      $gap: 27px
+    );
 
-        h1 {
-            // Estilos para el título dentro de la descripción del héroe
-            @include font($font: 'font-1', $color: "900", $size: 64px, $height: 76px, $spacing: 0.1px, $weight: 600);
-            margin: 10px 0;
+    max-width: 675px;
+    flex: 1 0 0;
 
-            span {
-                // Estilos para el span dentro del título
-                @include font($font: 'font-1', $list: $violets, $color: "500", $size: 64px, $height: 76px, $spacing: 0.1px, $weight: 700);
-                text-transform: capitalize;
-            }
-        }
+    .header-headline {
+      h1.title {
+        font-family: "Sofia Sans";
+        @include font($color: #fff);
+      }
 
-        p {
-            // Estilos para el párrafo dentro de la descripción del héroe
-            @include font($font: 'font-1', $color: "500", $size: 20px, $height: 42px, $weight: 400);
-        }
-
-        .hero-buttons {
-            // Estilos para el contenedor de botones del héroe
-            @include flex();
-            padding-top: 3rem;
-
-            a {
-                // Estilos para los botones dentro del contenedor de botones del héroe
-                padding: 16px 32px;
-                border-radius: 50px;
-                display: flex;
-                width: -moz-fit-content;
-                width: fit-content;
-                align-items: center;
-                gap: 6px;
-                text-transform: capitalize;
-                color: map-get($map: $violets, $key: "900");
-            }
-
-            .filled {
-                // Estilos para los botones dentro del contenedor de botones del héroe
-                background-color: map-get($map: $violets, $key: "700");
-                color: #ffffff !important;
-                transition: all 500ms ease-in-out;
-
-                &:hover {
-                    background-color: map-get($map: $violets, $key: "500");
-                }
-            }
-
-
-        }
+      p.description {
+        font-family: "Krub";
+        @include font($color: #fff);
+      }
     }
 
-    .imagen {
-        margin-right: 100px;
-        display: flex;
+    .buttons {
+      @include flex(
+        $justify: flex-start,
+        $align: center,
+        $direction: row,
+        $wrap: wrap,
+        $gap: 27px
+      );
+
+      @include small-screen() {
+        @include flex($direction: column, $gap: 14px);
         width: 100%;
-        height: 100%;
-        position: relative;
+      }
+
+      a {
+        @include flex($justify: center, $gap: 5px);
+        padding: 13px 27px;
+        color: var(--White, #fff);
+        font-family: "Inter";
+
+        @include font($weight: 500, $height: normal);
 
         img {
             width: 100%;

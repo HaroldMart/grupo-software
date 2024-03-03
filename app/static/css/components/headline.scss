@@ -1,12 +1,16 @@
 @import '../mixins.scss';
 
 .headline {
+    font-family: "DM Sans";
+    @include font($size: 16px, $spacing: 0.1px, $weight: 400);
     @include flex($direction: column, $justify: center, $gap: 15px);
     max-width: 760px;
     align-self: center;
 
-    h1{
-        @include font($font: 'font-3', $list: $violets, $color: '900', $size: 50px,  $height: 58px, $spacing: 0px, $weight: 400);
+    h1.headline-title {
+        color: map-get($map: $blacks, $key: "300");
+        color: red;
+      
     }
 
     p {

@@ -12,33 +12,19 @@ $colors: (
     "violet": violet,
 );
 
-$grays: (
-    "50": #f7f7f7,
-    "100": #ededed,
-    "200": #dedede,
-    "300": #c8c8c8,
-    "400": #adadad,
-    "500": #999999,
-    "600": #888888,
-    "700": #7b7b7b,
-    "800": #676767,
-    "900": #545454,
-    "950": #363636
+$blacks: (
+  "50": rgb(156, 156, 156),
+  "100": rgb(100, 100, 100),
+  "200": rgb(50, 50, 50),
+  "300": rgb(0, 0, 0),
+  "400": rgb(10, 10, 10),
+  "500": rgb(20, 20, 20),
+  "600": rgb(30, 30, 30),
+  "700": rgb(40, 40, 40),
+  "800": rgb(50, 50, 50),
+  "900": rgb(60, 60, 60),
 );
 
-$violets: (
-    "50": #f3f1ff,
-    "100": #ebe5ff,
-    "200": #d9ceff,
-    "300": #bda6ff,
-    "400": #9f74ff,
-    "500": #843dff,
-    "600": #7816ff,
-    "700": #6b04fd,
-    "800": #5903d4,
-    "900": #4b05ad,
-    "950": #2c0076
-);
 
 $fonts: (
     "font-1": "Inter",
@@ -90,19 +76,17 @@ $shadows: (
     gap: $gap;
 }
 
-@mixin font($font: "Inter",
-    $size: 16px,
-    $spacing: 0.1px,
-    $height: 20px,
-    $weight: 400,
-    $color: '700',
-    $list: $grays,
+@mixin font(
+  $size: 16px,
+  $spacing: 0.1px,
+  $height: 20px,
+  $weight: 400,
+  $color: map-get($colors, "gray")
 ) {
-    font-family: map-get($fonts, $font) !important;
-    letter-spacing: $spacing;
-    color: map-get($list, $color);
-    font-style: normal;
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $height;
+  letter-spacing: $spacing !important;
+  color: $color !important;
+  font-style: normal !important;
+  font-weight: $weight !important;
+  font-size: $size !important;
+  line-height: $height !important;
 }

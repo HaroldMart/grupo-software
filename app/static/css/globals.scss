@@ -16,38 +16,20 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    @include font($size: 64px, $height: 76px, $weight: 700);
-}
-
-h2 {
-    @include font($size: 36px, $height: 64px);
-}
-
-h3 {
-    @include font($size: 28px, $height: 36px, $weight: 600);
-}
-
-h4 {
-    @include font($size: 24px, $height: 32px, $weight: 600);
-}
-
-h5 {
-    @include font($size: 20px, $height: 28px, $weight: 600);
-}
-
-h6 {
-    @include font($size: 16px, $height: 20px, $weight: 500);
-}
+// Home page
 
 main {
-    @include flex($justify: flex-start,
-        $align: flex-start,
-        $direction: column,
-        $gap: 70px);
+  font-family: "DM Sans";
+  @include font($size: 16px, $spacing: 0.1px, $weight: 400);
+  @include flex(
+    $justify: flex-start,
+    $align: flex-start,
+    $direction: column,
+    $gap: 70px
+  );
 
-    padding: 50px 0px 100px 0px;
-    align-self: stretch;
+  padding: 50px 0px 100px 0px;
+  align-self: stretch;
 
     section {
         @include flex($justify: center,
@@ -69,32 +51,35 @@ main {
             padding: 0px 30px;
         }
 
-        div {
-            .headline {
-                h1.headline-title {
-                    @include font($font: "Sofia Sans",
-                        $size: 48px,
-                        $weight: 600,
-                        $spacing: 0.04px);
+    div {
+      .headline {
+        h1.headline-title {
+          font-family:  "Sofia Sans";
+          @include font(
+            $size: 48px,
+            $weight: 600,
+            $spacing: 0.04px
+          );
 
                     @include large-screen() {
                         @include font($size: 36px);
                     }
 
-                    @include small-screen() {
-                        @include font($size: 24px);
-                    }
-                }
-
-                p.headline-description {
-                    @include font($font: "Krub",
-                        $size: 18px,
-                        $weight: 500,
-                        $spacing: 0.2px);
-                }
-            }
+          @include small-screen() {
+            @include font($size: 24px);
+          }
         }
+        p.headline-description {
+          font-family: "Krub";
+          @include font(
+            $size: 18px,
+            $weight: 500,
+            $spacing: 0.2px
+          );
+        }
+      }
     }
+  }
 
     .section-1 {
         @include flex($direction: row);
@@ -200,19 +185,21 @@ main {
                     background: linear-gradient(219deg, #55a0e1 0%, #3b73e9 100%),
                         var(--White, #fff);
 
-                    p {
-                        @include font($font: "Inter",
-                            $size: 16px,
-                            $spacing: 0.1px,
-                            $height: 20px,
-                            $weight: 400,
-                            $color: map-get($colors, "gray"));
-                        align-self: center;
-                    }
-                }
-            }
+          p {
+            font-family: "Inter";
+            @include font(
+              $size: 16px,
+              $spacing: 0.1px,
+              $height: 20px,
+              $weight: 400,
+              $color: map-get($colors, "gray")
+            );
+            align-self: center;
+          }
         }
+      }
     }
+  }
 
     .section-3 {
         .content {
@@ -268,30 +255,27 @@ main {
                 height: 50px;
             }
 
-            .stadistic {
-                @include flex($justify: center,
-                    $direction: column,
-                    $wrap: wrap,
-                    $gap: 14px);
+      .stadistic {
+        @include flex(
+          $justify: center,
+          $direction: column,
+          $wrap: wrap,
+          $gap: 14px
+        );
 
-                h1 {
-                    @include font ($font: "font-3",
-                        $list: $violets,
-                        $color: '400',
-                        $size: 36px,
-                        $weight: 400);
-                }
-
-                p {
-                    @include font ($font: "font-2",
-                        $list: $grays,
-                        $color: '500',
-                        $size: 18px,
-                        $weight: 300);
-                }
-            }
+        h1 {
+          font-family: "Sofia Sans";
+          color: #488ae6 !important;
+          @include font($size: 36px, $weight: 700);
         }
+
+        p {
+          font-family: "Krub";
+          @include font($size: 16px);
+        }
+      }
     }
+  }
 
     .section-4 {
         @include flex($justify: center,
@@ -334,11 +318,13 @@ main {
                         $wrap: wrap,
                         $gap: 6px);
 
-                    h4 {
-                        @include font($font: "Sofia Sans",
-                            $size: 28px,
-                            $weight: 600,
-                            $color: #303b44);
+          h4 {
+            font-family:  "Sofia Sans";
+            @include font(
+              $size: 28px,
+              $weight: 600,
+              $color: #303b44
+            );
 
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
@@ -348,11 +334,13 @@ main {
                         align-self: stretch;
                     }
 
-                    p {
-                        @include font($font: "Krub",
-                            $size: 16px,
-                            $weight: 400,
-                            $color: #6a6a6a);
+          p {
+            font-family: "Krub";
+            @include font(
+              $size: 16px,
+              $weight: 400,
+              $color: #6a6a6a
+            );
 
                         align-self: stretch;
                         letter-spacing: 0.1px;
@@ -362,3 +350,54 @@ main {
         }
     }
 }
+
+// About us page
+
+// Services page
+
+.services {
+  font-family: "DM Sans";
+  @include font($size: 12px, $spacing: 0.1px, $weight: 200);
+ 
+  @include flex($justify: center, $direction: column, $gap: 20px);
+
+  .container-services {
+    color: green;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+
+    .service {
+      
+      background-color: rgb(31, 6, 70);
+      @include flex($justify: center, $wrap: wrap, $gap: 20px);
+      padding: 1rem;
+    }
+  }
+
+  .client-testimonials {
+    @include font($spacing: 0.1px, $weight: 200);
+    //   height: 600px;
+   
+
+    img {
+      width: 100%;
+    }
+    //   background-image: url('/public/images/mountain.jpg');
+
+    //   background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+
+  .questions {
+    font-family: "DM Sans";
+    @include font($spacing: 0.1px, $weight: 200);
+    @include flex($justify: space-evenly);
+    width: 100%;
+  }
+}
+
+// Contact us page
