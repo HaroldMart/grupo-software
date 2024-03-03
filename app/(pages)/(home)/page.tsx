@@ -8,12 +8,15 @@ import Card from "../../components/card";
 import projects from "../../static/projects";
 import Header from "../../components/partials/header";
 import services from "../../static/services";
+import ServicesLinks from "../../components/services-links";
 
 export default function Page() {
 	return (
 		<main>
 			<Header />
 
+			<ServicesLinks />
+			
 			<section className="section-1">
 				<div className="container">
 					<Headline

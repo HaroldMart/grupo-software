@@ -1,7 +1,7 @@
 const services = [
     {
         service: "Digital marketing solution experience",
-        description: " Llevando a cabo webs dinamicas y atracticas para que asi atraigas a tu publico a interactuar con tus productos y/o servicios."
+        description: "Llevando a cabo webs dinamicas y atracticas para que asi atraigas a tu publico a interactuar con tus productos y/o servicios."
     },
     {
         service: "UI/UX Design solutions & experience",
