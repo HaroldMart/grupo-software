@@ -1,6 +1,6 @@
 "use client";
 
-import Section from "@/components/partial/section";
+import Section from "@/components/partials/section";
 import Image from "next/image";
 import { FaPlayCircle } from "react-icons/fa";
 

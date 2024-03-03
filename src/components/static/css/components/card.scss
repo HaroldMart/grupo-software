@@ -50,19 +50,19 @@
         h5 {
           color: #303b44;
           text-align: center;
-          @include font($size: 18px, $weight: 600, $color: #303b44);
+          @include font($size: 18px, $weight: 600);
           text-transform: uppercase;
         }
 
         p.time-published {
           color: var(--gray-500, #8b96a2);
           text-align: center;
-          @include font($color: var(--gray-500, #8b96a2));
+          @include font();
         }
       }
 
       .description {
-        @include font($color: #6a6a6a);
+        @include font();
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
