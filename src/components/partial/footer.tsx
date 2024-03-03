@@ -1,4 +1,4 @@
-import "../../static/css/partials/footer.scss";
+import "../../components/static/css/partials/footer.scss";
 
 export function Footer() {
     return(
