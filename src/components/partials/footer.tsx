@@ -7,8 +7,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="header">
+      <h3>Suscribe to our quartely newsletter</h3>
         <div className="send-email">
-          <h3>Suscribe to our quartely newsletter</h3>
           <form action="post">
             <input
               type="email"
