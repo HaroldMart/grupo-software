@@ -105,10 +105,11 @@ $shadows: (
   gap: $gap;
 }
 
-@mixin font($size: 16px, $spacing: 0.1px, $height: 20px, $weight: 400) {
+@mixin font($size: 16px, $spacing: 0.1px, $height: 24px, $weight: 400, $align: left) {
   letter-spacing: $spacing;
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
+  text-align: $align;
 }

@@ -1,19 +1,31 @@
 @import '../mixins.scss';
 
 .headline {
-    font-family: "DM Sans";
-    @include font($size: 16px, $spacing: 0.1px, $weight: 400);
+    width: min(760px, 100%);
     @include flex($direction: column, $justify: center, $gap: 15px);
-    max-width: 760px;
-    align-self: center;
 
-    h1.headline-title {
-        color: map-get($map: $blacks, $key: "300");
-        color: red;
-      
+    h2 {
+        color: #2E2B36;
+        @include font($size: 36px, $height:44px ,$weight: 600);
     }
 
     p {
-        text-align: center;
+        color: #474747;
+        @include font($size: 16px, $align: center);
+    }
+
+}
+
+.tagline {
+    border-left: 3px solid #663BFF;
+    border-radius: 4px;
+    @include flex($justify:center);
+    background-color: #F2F0FF;
+    padding: 6px 12px ;
+
+    label {
+        color: #663BFF;
+        text-transform: uppercase;
+        @include font($size:small, $weight: 500);
     }
 }

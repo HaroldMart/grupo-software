@@ -1,6 +1,7 @@
 "use client";
 
-import Section from "@/components/partials/section";
+import Headline from "@/components/headline";
+import { Section } from "@/components/partials/section";
 import Image from "next/image";
 import { FaPlayCircle } from "react-icons/fa";
 
@@ -26,9 +27,17 @@ export default function Page() {
          </div>
 
 			<Section>
-				<h2>Título de la sección</h2>
-				<p>Contenido de la sección...</p>
+				<Headline
+					tagline="About us"
+					title="Travelling as a discovery and progress."
+					description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda hic minima quam officiis, nam nobis incidunt. Modi nam, necessitatibus accusamus esse officia ratione provident enim eum ipsa! Consectetur, eos officia."
+				/>
+				<div>
+					<p>Contenido de la sección...</p>
+				</div>
+				
 			</Section>
+
 			<Section>
 				<h1>Heading</h1>
 				<h2>Heading</h2>
