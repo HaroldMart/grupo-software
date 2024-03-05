@@ -70,31 +70,31 @@ main {
                 border-radius: 20px;
                 padding: 3px 15px 3px 3px;
                 margin-bottom: 10px;
-                @include font($font: 'font-1', $color: "800", $size: 14px, $height: 32px, $spacing: 0.1px, $weight: 400);
+                @include font($size: 14px, $height: 32px, $spacing: 0.1px, $weight: 400);
 
                 span {
                     background-color: map-get($map: $violet-scale, $key: "600");
                     padding: 5px 10px;
                     border-radius: 15px;
-                    @include font($color: "50", $size: 14px)
+                    @include font($size: 14px)
                 }
             }
 
             h1 {
                 // Estilos para el título dentro de la descripción del héroe
-                @include font($font: 'font-1', $color: "900", $size: 64px, $height: 76px, $spacing: 0.1px, $weight: 600);
+                @include font($size: 64px, $height: 76px, $spacing: 0.1px, $weight: 600);
                 margin: 10px 0;
 
                 span {
                     // Estilos para el span dentro del título
-                    @include font($font: 'font-1', $list: $violet-scale, $color: "500", $size: 64px, $height: 76px, $spacing: 0.1px, $weight: 700);
+                    @include font($size: 64px, $height: 76px, $spacing: 0.1px, $weight: 700);
                     text-transform: capitalize;
                 }
             }
 
             p {
                 // Estilos para el párrafo dentro de la descripción del héroe
-                @include font($font: 'font-1', $color: "500", $size: 20px, $height: 42px, $weight: 400);
+                @include font($size: 20px, $height: 42px, $weight: 400);
             }
 
             .hero-buttons {

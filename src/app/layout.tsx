@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "../components/static/css/globals.scss";
 import { inter } from "../utils/fonts";
-import { Footer } from "../components/partial/footer";
-import Navbar from "../components/partial/navbar";
+import { Footer } from "../components/partials/footer";
+import Navbar from "../components/partials/navbar";
 
 export const metadata: Metadata = {
 	title: "Grupo Software",
