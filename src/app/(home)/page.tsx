@@ -1,5 +1,6 @@
 "use client";
 
+import { Footer } from "@/components/partials/footer";
 import Headline from "@/components/headline";
 import { Section } from "@/components/partials/section";
 import Image from "next/image";
