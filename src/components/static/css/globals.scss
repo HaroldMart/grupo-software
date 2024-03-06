@@ -34,10 +34,17 @@ h4 {
 
 h5 {
     @include font($size: 20px, $height: 28px, $weight: 600);
+    margin-bottom: 16px;
 }
 
 h6 {
     @include font($size: 16px, $height: 20px, $weight: 500);
+}
+
+p {
+    color: #393644;
+    @include font($height: 24px, $weight: 400);
+    margin-bottom: 24px;
 }
 
 main {
@@ -53,14 +60,13 @@ main {
         // Estilos para la sección hero
         display: grid;
         align-items: center;
-        grid-template-columns: 60% 1fr;
+        grid-template-columns: 1fr minmax(40%, min(100%, 500px));
+        padding: 0 125px;
         height: 90vh;
 
         .hero-description {
             // Estilos para la descripción del héroe
-            width: 100%;
-            padding: 0 125px;
-
+            min-width: 500px;
 
             .hero-tagline {
                 // Estilos para la línea de etiqueta del héroe
@@ -74,6 +80,7 @@ main {
 
                 span {
                     background-color: map-get($map: $violet-scale, $key: "600");
+                    color: #ffffff;
                     padding: 5px 10px;
                     border-radius: 15px;
                     @include font($size: 14px)
@@ -81,12 +88,12 @@ main {
             }
 
             h1 {
-                // Estilos para el título dentro de la descripción del héroe
+                color: #2E2B36;
                 @include font($size: 64px, $height: 76px, $spacing: 0.1px, $weight: 600);
                 margin: 10px 0;
 
                 span {
-                    // Estilos para el span dentro del título
+                    color: #7b4bff;
                     @include font($size: 64px, $height: 76px, $spacing: 0.1px, $weight: 700);
                     text-transform: capitalize;
                 }
@@ -139,9 +146,102 @@ main {
 
             img {
                 width: 100%;
-                position: absolute;
-                bottom: 0;
+                // position: absolute;
+                // bottom: 0;
             }
         }
+    }
+
+    .services-cont {
+        width: 100%;
+
+        ul.items {
+            // @include flex($justify: space-around, $gap: 25px, $align: flex-start, $wrap: nowrap);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 33%));
+            width: 100%;
+            justify-content: space-between;
+
+
+            li.item {
+                padding: 24px 22px;
+                cursor: pointer;
+                border-radius: 4px;
+                @include flex($direction: column, $gap: 29px, $align: flex-start);
+
+                &:hover {
+                    .btn {
+                        transition: all 250ms;
+                        text-decoration: underline;
+                    }
+
+                }
+
+                .item-content {
+                    @include flex($direction: column, $gap: 16px, $align: flex-start);
+
+                    .icon-cont {
+                        width: -moz-fit-content;
+                        width: fit-content;
+                        border-radius: 10px;
+                        padding: 22px;
+
+                        &.primary {
+                            background-color: #F5EFFF;
+                            .icon {
+                                fill: #873dff;
+                            }
+                        }
+
+                        &.secondary {
+                            background-color: #e5ffdf;
+                            .icon {
+                                fill: #28da00;
+                            }
+                        }
+
+                        &.tertiary {
+                            background-color: #ffefef;
+                            .icon {
+                                fill: #ff4646;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        color: #2E2B36;
+                        @include font($size: 24px, $height: 32px, $weight: 600);
+                    }
+
+                    p {
+                        font-family: 'Inter';
+                    }
+                }
+
+                .btn {
+                    color: #6731FF;
+                    @include flex($align: center, $gap: 6px);
+                }
+            }
+        }
+    }
+
+    .side-content {
+        @include flex($gap: 60px);
+
+        @include custom-screen(1200px) {
+            flex-wrap: wrap;
+        }
+
+
+        div {
+            width: 100%;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
     }
 }
