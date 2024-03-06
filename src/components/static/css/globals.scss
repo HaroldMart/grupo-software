@@ -2,49 +2,49 @@
 @import "../css/mixins.scss";
 
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-    @include font($size: 64px, $height: 76px, $weight: 700);
+  @include font($size: 64px, $height: 76px, $weight: 700);
 }
 
 h2 {
-    @include font($size: 36px, $height: 64px, $weight: 600);
+  @include font($size: 36px, $height: 64px, $weight: 600);
 }
 
 h3 {
-    @include font($size: 28px, $height: 36px, $weight: 600);
+  @include font($size: 28px, $height: 36px, $weight: 600);
 }
 
 h4 {
-    @include font($size: 24px, $height: 32px, $weight: 600);
+  @include font($size: 24px, $height: 32px, $weight: 600);
 }
 
 h5 {
-    @include font($size: 20px, $height: 28px, $weight: 600);
-    margin-bottom: 16px;
+  @include font($size: 20px, $height: 28px, $weight: 600);
+  margin-bottom: 16px;
 }
 
 h6 {
-    @include font($size: 16px, $height: 20px, $weight: 500);
+  @include font($size: 16px, $height: 20px, $weight: 500);
 }
 
 p {
-    color: #393644;
-    @include font($height: 24px, $weight: 400);
-    margin-bottom: 24px;
+  color: #393644;
+  @include font($height: 24px, $weight: 400);
+  margin-bottom: 24px;
 }
 
 .btn {
@@ -72,183 +72,191 @@ p {
 
 
 main {
-    @include flex($justify: flex-start,
-        $align: flex-start,
-        $direction: column,
-        $gap: 70px);
+  @include flex(
+    $justify: flex-start,
+    $align: flex-start,
+    $direction: column,
+    $gap: 70px
+  );
 
-    padding: 50px 0px 100px 0px;
-    align-self: stretch;
+  padding: 50px 0px 100px 0px;
+  align-self: stretch;
 
-    .hero-section {
-        // Estilos para la sección hero
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr minmax(40%, min(100%, 500px));
-        padding: 0 125px;
-        width: 100%;
-        height: 90vh;
+  .hero-section {
+    // Estilos para la sección hero
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr minmax(40%, min(100%, 500px));
+    padding: 0 125px;
+    width: 100%;
+    height: 90vh;
 
-        @include custom-screen(900px) {
-            display: flex;
-            flex-direction: column-reverse;
-            height: auto;
-            padding: 0 60px;
-
-
-        }
-
-        @include mid-screen {
-            align-items: flex-start;
-
-            .hero-description {
-                min-width: 100% !important;
-
-                h1 {
-                    font-size: 42px !important;
-                    line-height: 16px !important;
-
-                    span {
-                        font-size: 44px !important;
-                    }
-                }
-
-
-                p {
-                    margin-bottom: 0;
-                    font-size: 16px;
-                }
-            }
-        }
-
-        @include small-screen {
-            padding: 0 30px;
-
-            .hero-description {
-                h1 {
-                    font-size: 32px !important;
-
-                    span {
-                        font-size: 32px !important;
-                    }
-                }
-
-                p {
-                    font-size: 15px !important;
-                }
-
-                .hero-buttons {
-                    flex-direction: column !important;
-                    gap: 14px;
-
-                    a {
-                        white-space: nowrap;
-                        width: 100% !important;
-                    }
-                }
-            }
-        }
-
-        .hero-description {
-            // Estilos para la descripción del héroe
-            min-width: 500px;
-
-            .hero-tagline {
-                // Estilos para la línea de etiqueta del héroe
-                background-color: map-get($map: $violet-scale, $key: "50");
-                width: -moz-fit-content;
-                width: fit-content;
-                border-radius: 20px;
-                padding: 3px 15px 3px 3px;
-                margin-bottom: 10px;
-                @include font($size: 14px, $height: 32px, $spacing: 0.1px, $weight: 400);
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                span {
-                    background-color: map-get($map: $violet-scale, $key: "600");
-                    color: #ffffff;
-                    padding: 5px 10px;
-                    border-radius: 15px;
-                    @include font($size: 14px)
-                }
-            }
-
-            h1 {
-                color: #2E2B36;
-                @include font($size: 64px, $height: 76px, $spacing: 0.1px, $weight: 600);
-                margin: 10px 0;
-
-                span {
-                    color: #7b4bff;
-                    @include font($size: 64px, $height: 76px, $spacing: 0.1px, $weight: 700);
-                    text-transform: capitalize;
-                }
-            }
-
-            p {
-                // Estilos para el párrafo dentro de la descripción del héroe
-                @include font($size: 20px, $height: 42px, $weight: 400);
-            }
-
-            .hero-buttons {
-                // Estilos para el contenedor de botones del héroe
-                @include flex();
-                padding-top: 3rem;
-
-                a {
-                    // Estilos para los botones dentro del contenedor de botones del héroe
-                    padding: 16px 32px;
-                    border-radius: 50px;
-                    display: flex;
-                    width: -moz-fit-content;
-                    width: fit-content;
-                    align-items: center;
-                    gap: 6px;
-                    text-transform: capitalize;
-                    color: map-get($map: $violet-scale, $key: "900");
-                }
-
-                .filled {
-                    // Estilos para los botones dentro del contenedor de botones del héroe
-                    background-color: map-get($map: $violet-scale, $key: "700");
-                    color: #ffffff !important;
-                    transition: all 500ms ease-in-out;
-
-                    &:hover {
-                        background-color: map-get($map: $violet-scale, $key: "500");
-                    }
-                }
-
-
-            }
-        }
-
-        .imagen {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            position: relative;
-
-            img {
-                width: 100%;
-                // position: absolute;
-                // bottom: 0;
-            }
-        }
+    @include custom-screen(900px) {
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      padding: 0 60px;
     }
 
-    .services-cont {
+    @include mid-screen {
+      overflow: hidden;
+      align-items: flex-start;
+
+      .hero-description {
+        min-width: 100% !important;
+
+        h1 {
+          font-size: 42px !important;
+          line-height: 16px !important;
+
+          span {
+            font-size: 44px !important;
+          }
+        }
+
+        p {
+          margin-bottom: 0;
+          font-size: 16px;
+        }
+      }
+    }
+
+    @include small-screen {
+      padding: 0 30px;
+
+      .hero-description {
+        h1 {
+          font-size: 32px !important;
+
+          span {
+            font-size: 32px !important;
+          }
+        }
+
+        p {
+          font-size: 15px !important;
+        }
+
+        .hero-buttons {
+          flex-direction: column !important;
+          gap: 14px;
+
+          a {
+            white-space: nowrap;
+            width: 100% !important;
+          }
+        }
+      }
+    }
+
+    .hero-description {
+      // Estilos para la descripción del héroe
+      min-width: 500px;
+
+      .hero-tagline {
+        // Estilos para la línea de etiqueta del héroe
+        background-color: map-get($map: $violet-scale, $key: "50");
+        width: -moz-fit-content;
+        width: fit-content;
+        border-radius: 20px;
+        padding: 3px 15px 3px 3px;
+        margin-bottom: 10px;
+        @include font(
+          $size: 14px,
+          $height: 32px,
+          $spacing: 0.1px,
+          $weight: 400
+        );
+        // word-break: keep-all;
+        white-space: unset;
+
+        span {
+          background-color: map-get($map: $violet-scale, $key: "600");
+          color: #ffffff;
+          padding: 5px 10px;
+          border-radius: 15px;
+          @include font($size: 14px);
+        }
+      }
+
+      h1 {
+        color: #2e2b36;
+        @include font(
+          $size: 64px,
+          $height: 76px,
+          $spacing: 0.1px,
+          $weight: 600
+        );
+        margin: 10px 0;
+
+        span {
+          color: #7b4bff;
+          @include font(
+            $size: 64px,
+            $height: 76px,
+            $spacing: 0.1px,
+            $weight: 700
+          );
+          text-transform: capitalize;
+        }
+      }
+
+      p {
+        // Estilos para el párrafo dentro de la descripción del héroe
+        @include font($size: 20px, $height: 42px, $weight: 400);
+      }
+
+      .hero-buttons {
+        // Estilos para el contenedor de botones del héroe
+        @include flex();
+        padding-top: 3rem;
+
+        a {
+          // Estilos para los botones dentro del contenedor de botones del héroe
+          padding: 16px 32px;
+          border-radius: 50px;
+          display: flex;
+          width: -moz-fit-content;
+          width: fit-content;
+          align-items: center;
+          gap: 6px;
+          text-transform: capitalize;
+          color: map-get($map: $violet-scale, $key: "900");
+        }
+
+        .filled {
+          // Estilos para los botones dentro del contenedor de botones del héroe
+          background-color: map-get($map: $violet-scale, $key: "700");
+          color: #ffffff !important;
+          transition: all 500ms ease-in-out;
+
+          &:hover {
+            background-color: map-get($map: $violet-scale, $key: "500");
+          }
+        }
+      }
+    }
+
+    .imagen {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      img {
         width: 100%;
+        // position: absolute;
+        // bottom: 0;
+      }
+    }
+  }
 
-        ul.items {
-            // @include flex($justify: space-around, $gap: 25px, $align: flex-start, $wrap: nowrap);
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 33%));
-            width: 100%;
-            justify-content: space-between;
-
+  ul.services-cont {
+    // @include flex($justify: space-around, $gap: 25px, $align: flex-start, $wrap: nowrap);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    justify-content: space-between;
             @include small-screen {
                 gap: 36px !important;
 
@@ -257,92 +265,86 @@ main {
                 }
             }
 
-            li.item {
-                padding: 24px 22px;
-                cursor: pointer;
-                border-radius: 4px;
-                @include flex($direction: column, $gap: 29px, $align: flex-start);
+    li.item {
+      padding: 24px 22px;
+      cursor: pointer;
+      border-radius: 4px;
+      @include flex($direction: column, $gap: 29px, $align: flex-start);
 
-
-
-                &:hover {
-                    .btn {
-                        transition: all 250ms;
-                        text-decoration: underline;
-                    }
-
-                }
-
-                .item-content {
-                    @include flex($direction: column, $gap: 16px, $align: flex-start);
-
-                    .icon-cont {
-                        width: -moz-fit-content;
-                        width: fit-content;
-                        border-radius: 10px;
-                        padding: 22px;
-
-                        &.primary {
-                            background-color: #F5EFFF;
-
-                            .icon {
-                                fill: #873dff;
-                            }
-                        }
-
-                        &.secondary {
-                            background-color: #e5ffdf;
-
-                            .icon {
-                                fill: #28da00;
-                            }
-                        }
-
-                        &.tertiary {
-                            background-color: #ffefef;
-
-                            .icon {
-                                fill: #ff4646;
-                            }
-                        }
-                    }
-
-                    h4 {
-                        color: #2E2B36;
-                        @include font($size: 24px, $height: 32px, $weight: 600);
-                    }
-
-                    p {
-                        font-family: 'Inter';
-                    }
-                }
-
-                .btn {
-                    color: #6731FF;
-                    @include flex($align: center, $gap: 6px);
-                }
-            }
+      &:hover {
+        .btn {
+          transition: all 250ms;
+          text-decoration: underline;
         }
+      }
+
+      .item-content {
+        @include flex($direction: column, $gap: 16px, $align: flex-start);
+
+        .icon-cont {
+          width: -moz-fit-content;
+          width: fit-content;
+          border-radius: 10px;
+          padding: 22px;
+
+          &.primary {
+            background-color: #f5efff;
+
+            .icon {
+              fill: #873dff;
+            }
+          }
+
+          &.secondary {
+            background-color: #e5ffdf;
+
+            .icon {
+              fill: #28da00;
+            }
+          }
+
+          &.tertiary {
+            background-color: #ffefef;
+
+            .icon {
+              fill: #ff4646;
+            }
+          }
+        }
+
+        h4 {
+          color: #2e2b36;
+          @include font($size: 24px, $height: 32px, $weight: 600);
+        }
+
+        p {
+          font-family: "Inter";
+        }
+      }
+
+      .btn {
+        color: #6731ff;
+        @include flex($align: center, $gap: 6px);
+      }
+    }
+  }
+
+  .side-content {
+    @include flex($gap: 60px);
+
+    @include custom-screen(1200px) {
+      flex-wrap: wrap;
     }
 
-    .side-content {
-        @include flex($gap: 60px);
+    div {
+      width: 100%;
 
-        @include custom-screen(1200px) {
-            flex-wrap: wrap;
-        }
-
-
-        div {
-            width: 100%;
-
-            img {
-                height: auto;
-                width: 100%;
-            }
-        }
-
+      img {
+        height: auto;
+        width: 100%;
+      }
     }
+  }
 
     .portfolio-cta {
         width: 100%;
