@@ -7,7 +7,6 @@ section {
         $gap: 50px);
     padding: 0px 150px;
     align-self: stretch;
-    border: 1px solid red;
 
     @include large-screen() {
         padding: 0px 75px;

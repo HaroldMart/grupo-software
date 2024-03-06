@@ -1,14 +1,21 @@
-import '../static/css/components/headline.scss';
+import clsx from 'clsx';
+import '../components/static/css/components/headline.scss';
 
-export default function Headline() {
-    // export default function Headline({ title, description}: {title:string, description:string}) {
+
+function Tagline({name}: {name?:string}) {
     return (
-        <div>
-            headline(compoment)
+        <div className="tagline">
+            <label>{name}</label>
         </div>
-        // <div className="headline">
-        //     <h1>{title}</h1>
-        //     <p>{description}</p>
-        // </div>
+    );
+}
+
+export default function Headline({ title, description, tagline}: {title:string, description?:string, tagline?:string}) {
+    return (
+        <div className="headline">
+            <Tagline name={tagline}/>
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </div>
     );
 }
