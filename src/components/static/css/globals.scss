@@ -47,6 +47,30 @@ p {
     margin-bottom: 24px;
 }
 
+.btn {
+    padding: 16px 32px;
+    border-radius: 50px;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: center;
+    gap: 6px;
+    text-transform: capitalize;
+    color: map-get($map: $violet-scale, $key: "900");
+
+    &.filled {
+        background-color: map-get($map: $violet-scale, $key: "700");
+        color: #ffffff !important;
+        transition: all 500ms ease-in-out;
+
+        &:hover {
+            background-color: map-get($map: $violet-scale, $key: "500");
+        }
+    }
+}
+
+
+
 main {
     @include flex($justify: flex-start,
         $align: flex-start,
@@ -75,7 +99,6 @@ main {
         }
 
         @include mid-screen {
-            overflow: hidden;
             align-items: flex-start;
 
             .hero-description {
@@ -139,8 +162,9 @@ main {
                 padding: 3px 15px 3px 3px;
                 margin-bottom: 10px;
                 @include font($size: 14px, $height: 32px, $spacing: 0.1px, $weight: 400);
-                // word-break: keep-all;
-                white-space: unset;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 span {
                     background-color: map-get($map: $violet-scale, $key: "600");
@@ -225,12 +249,21 @@ main {
             width: 100%;
             justify-content: space-between;
 
+            @include small-screen {
+                gap: 36px !important;
+
+                li.item {
+                    padding: 0 !important;
+                }
+            }
 
             li.item {
                 padding: 24px 22px;
                 cursor: pointer;
                 border-radius: 4px;
                 @include flex($direction: column, $gap: 29px, $align: flex-start);
+
+
 
                 &:hover {
                     .btn {
@@ -309,5 +342,12 @@ main {
             }
         }
 
+    }
+
+    .portfolio-cta {
+        width: 100%;
+        padding: 55px 0;
+        @include flex($gap:24px, $direction:column, $align: center);
+        background: url(https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center no-repeat;
     }
 }

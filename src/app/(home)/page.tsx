@@ -60,6 +60,11 @@ export default function Page() {
 
 			</Section>
 
+			<div className="portfolio-cta">
+				<Headline title="Travelling as a way of discovery and progress" description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia." alignment="center" />
+				<a href="#" className="btn filled">Get Started</a>
+			</div>
+
 			<Section>
 				<Headline
 					tagline="About us"
