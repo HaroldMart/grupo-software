@@ -2,8 +2,10 @@ import "../../components/static/css/partials/footer.scss";
 import { IoLogoTwitter, IoLogoGithub  } from "react-icons/io";
 import { FaFacebookF, FaTelegramPlane, FaPinterest   } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import Link from 'next/link'
 
 export function Footer() {
+  const defaulLinkIcons = "https://www.google.com/search?q=xvideos&oq=xvideos&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzMxMWowajGoAgCwAgA&sourceid=chrome&ie=UTF-8"
   return (
     <footer className="footer">
       <div className="header">
@@ -13,9 +15,9 @@ export function Footer() {
             <input
               type="email"
               name="email"
-              placeholder="I wanna fuck with 10 women"
+              placeholder="hello@gmail.com"
             />
-            <button type="submit">Send email</button>
+            <button type="submit">Subscribe</button>
           </form>
         </div>
       </div>
@@ -37,43 +39,46 @@ export function Footer() {
           <div className="grupo-software">
             <h5>Grupo Software</h5>
             <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li><a href="#about">Section</a></li>
+              <li><a href="#about">Section</a></li>
+              <li><a href="#about">Section</a></li>
+              <li><a href="#about">Section</a></li>
+              <li><a href="#about">Section</a></li>
+              <li><a href="#about">Section</a></li>
             </ul>
           </div>
           <div className="services">
             <h5>Services</h5>
             <ul>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
+            <li><Link href="/services">Service</Link></li>
+              <li><Link href="/services">Service</Link></li>
+              <li><Link href="/services">Service</Link></li>
+              <li><Link href="/services">Service</Link></li>
+              <li><Link href="/services">Service</Link></li>
+              <li><Link href="/services">Service</Link></li>
             </ul>
           </div>
           <div className="event">
             <h5>Events</h5>
             <ul>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
-              <li>Link</li>
+            <li><a target="blank" href="https://youtu.be/ubCp6K1WRus">Link</a></li>
+            <li><a target="blank" href="https://youtu.be/ubCp6K1WRus">Link</a></li>
+            <li><a target="blank" href="https://youtu.be/ubCp6K1WRus">Link</a></li>
+            <li><a target="blank" href="https://youtu.be/ubCp6K1WRus">Link</a></li>
+            <li><a target="blank" href="https://youtu.be/ubCp6K1WRus">Link</a></li>
+            <li><a target="blank" href="https://youtu.be/ubCp6K1WRus">Link</a></li>
             </ul>
           </div>
         </div>
         <div className="follow">
           <h5>Follow</h5>
           <div className="icons">
-            <FaFacebookF size={22}/>
-            <RiInstagramFill size={22}/> 
-            <IoLogoTwitter size={22}/>
-            <FaTelegramPlane size={22}/>
-            <IoLogoGithub size={22}/>
-            <FaPinterest size={22}/>
+          <a target="blank" href={defaulLinkIcons}><FaFacebookF size={22}/></a>
+           <a target="blank" href={defaulLinkIcons}><RiInstagramFill size={22}/> </a>
+           <a target="blank" href={defaulLinkIcons}><IoLogoTwitter size={22}/></a>
+           <a target="blank" href={defaulLinkIcons}><FaTelegramPlane size={22}/></a>
+           <a target="blank" href={defaulLinkIcons}><IoLogoGithub size={22}/></a>
+           <a target="blank" href={defaulLinkIcons}><FaPinterest size={22}/></a>
           </div>
         </div>
       </div>

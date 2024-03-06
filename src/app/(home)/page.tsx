@@ -28,6 +28,7 @@ export default function Page() {
          </div>
 
 			<Section>
+				<div id="about"></div>
 				<Headline
 					tagline="About us"
 					title="Travelling as a discovery and progress."
@@ -46,7 +47,6 @@ export default function Page() {
 				<h4>Heading</h4>
 				<h5>Heading</h5>
 				<h6>Heading</h6>
-
 			</Section>
 		</main>
 	);

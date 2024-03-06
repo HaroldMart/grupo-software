@@ -1,5 +1,5 @@
 import Headline from "../../components/headline";
-import services from '../../static/services';
+import services from '../../utils/services';
 import Image from "next/image";
 
 export default function Page() {
