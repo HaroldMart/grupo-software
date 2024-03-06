@@ -39,6 +39,7 @@ a {
 
                 @include small-screen {
                     @include flex($justify: center, $direction: column);
+                    background-color: transparent;
                 }
 
                 input {
@@ -49,10 +50,17 @@ a {
                     width: 300px;
                     font-family: map-get($map: $fonts, $key: "font-1");
                     outline: none;
+                    border: none;
+                    border-radius: 20px;
                     @include font($size: 16px);
 
                     &::placeholder {
                         @include font($size: 16px);
+                    }
+
+                    @include small-screen {
+                        margin-bottom: 10px;
+                        background-color: white;
                     }
                 }
 
@@ -78,16 +86,20 @@ a {
         @include flex($justify: space-evenly, $align: flex-start);
         background-color: #182b36;
         width: 100%;
-        padding: 5rem 4rem;
+        padding: 5rem 3rem;
         position: relative;
         display: grid;
         align-items: flex-start;
         gap: 100px;
         grid-template-columns: repeat(3, 1fr);
 
-        @include custom-screen(978px) {
+        @include custom-screen(1120px) {
             grid-template-columns: 1fr;
             gap: 30px;
+        }
+
+        @include custom-screen(500px) {
+            padding: 30px 20px;
         }
 
         .image-logo {
@@ -130,6 +142,7 @@ a {
                 color: #312dcc;
                 cursor: pointer;
 
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -144,12 +157,17 @@ a {
                 justify-content: center;
             }
 
+            @include custom-screen(1120px) {
+                justify-content: space-evenly;
+            }
+
             div {
                 min-width: 160px;
                 @include flex($direction: column, $align: flex-start);
 
-                @include custom-screen(978px) {
-                    @include flex($direction: column, $align: flex-start);
+                @include custom-screen(1120px) {
+                    @include flex($direction: column, $align: center);
+                    text-align: center;
                 }
 
                 h5 {
@@ -169,7 +187,7 @@ a {
         }
 
         .follow {
-            @include custom-screen(978px) {
+            @include custom-screen(1120px) {
                 @include flex($direction: column);
             }
 
@@ -186,16 +204,23 @@ a {
     .footer-legals {
         @include flex($justify: space-between, $wrap: wrap, $gap: 30px);
         background-color: yellow;
-        padding: 30px 78px;
+        padding: 30px 68px;
         width: 100%;
         background-color: #0f2027;
 
         @include custom-screen(740px) {
             justify-content: center;
+            padding: 30px 20px;
         }
+
+    
 
         .terms {
             @include flex($gap: 20px);
+
+            @include small-screen {
+                flex-direction: column;
+            }
 
             a {
                 @include font($size: 14px, $weight: 700);

@@ -66,8 +66,7 @@ export default function Page() {
 					title="Travelling as a discovery and progress."
 					description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda hic minima quam officiis, nam nobis incidunt. Modi nam, necessitatibus accusamus esse officia ratione provident enim eum ipsa! Consectetur, eos officia."
 				/>
-				<div className="content services-cont">
-					<ul className="items">
+					<ul className="content services-cont">
 						<li className="item">
 							<div className="item-content">
 								<div className="icon-cont primary">
@@ -99,7 +98,6 @@ export default function Page() {
 							<a className="btn" href="#">Get started <FaArrowRight fill="#69686E" /></a>
 						</li>
 					</ul>
-				</div>
 			</Section>
 		</main>
 	);
