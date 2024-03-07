@@ -9,6 +9,7 @@ import { BiStoreAlt } from "react-icons/bi";
 import { BsBoxSeam } from "react-icons/bs";
 import { BsBarChart } from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
+import { ImQuotesLeft } from "react-icons/im";
 
 import AboutImagen from '../../../public/images/about-image.png'
 import GroupSvg from '../../../public/images/undraw_programming_re_kg9v.svg'
@@ -41,7 +42,7 @@ export default function Page() {
 					<div>
 						<Image src={AboutImagen} alt="Imagen de about" />
 					</div>
-					
+
 					<div className="content">
 						<Headline
 							tagline="About us"
@@ -51,7 +52,7 @@ export default function Page() {
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nisi neque provident fuga voluptatum quo vel impedit cum, voluptas illo tempora! Aliquid ratione placeat vero esse. Minima nisi consequatur corrupti?</p>
 							<h5>Nuestra mision</h5>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veniam doloremque eum, tempore numquam amet facilis aspernatur officia rem? Autem suscipit quod delectus repellat, fugit deserunt minima! Reprehenderit, iste molestiae!
-							Rem soluta voluptatem hic odit facilis corrupti laborum incidunt eligendi cumque iusto quibusdam cupiditate voluptatum similique recusandae illo, architecto earum quam repellat impedit harum voluptas aliquid. Iure deserunt quisquam exercitationem!</p>
+								Rem soluta voluptatem hic odit facilis corrupti laborum incidunt eligendi cumque iusto quibusdam cupiditate voluptatum similique recusandae illo, architecto earum quam repellat impedit harum voluptas aliquid. Iure deserunt quisquam exercitationem!</p>
 						</div>
 					</div>
 
@@ -71,39 +72,107 @@ export default function Page() {
 					title="Travelling as a discovery and progress."
 					description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda hic minima quam officiis, nam nobis incidunt. Modi nam, necessitatibus accusamus esse officia ratione provident enim eum ipsa! Consectetur, eos officia."
 				/>
-					<ul className="content services-cont">
-						<li className="item">
-							<div className="item-content">
-								<div className="icon-cont primary">
-									<BsBook className="icon" size={28} fill="#9E64FF" />
-								</div>
-								<h4>How does writing influence your personal brand?</h4>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. doloremque odit quae totam ullam facere eveniet architecto!</p>
+				<ul className="content services-cont">
+					<li className="item">
+						<div className="item-content">
+							<div className="icon-cont primary">
+								<BsBook className="icon" size={28} fill="#9E64FF" />
 							</div>
-							<a className="btn" href="#">Get started <FaArrowRight /></a>
-						</li>
-						<li className="item">
-							<div className="item-content">
-								<div className="icon-cont secondary">
-									<BsBarChart className="icon" size={28} fill="#9E64FF" />
-								</div>
-								<h4>How does writing influence your personal brand?</h4>
-								<p>Lorem Commodi dolorum sint iste nihil eos, expedita magni, doloremque odit quae totam ullam facere eveniet architecto!</p>
+							<h4>How does writing influence your personal brand?</h4>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. doloremque odit quae totam ullam facere eveniet architecto!</p>
+						</div>
+						<a className="btn" href="#">Get started <FaArrowRight /></a>
+					</li>
+					<li className="item">
+						<div className="item-content">
+							<div className="icon-cont secondary">
+								<BsBarChart className="icon" size={28} fill="#9E64FF" />
 							</div>
-							<a className="btn" href="#">Get started <FaArrowRight /></a>
-						</li>
-						<li className="item">
-							<div className="item-content">
-								<div className="icon-cont tertiary">
-									<BsBoxSeam className="icon" size={28} fill="#9E64FF" />
-								</div>
-								<h4>How does writing influence your personal brand?</h4>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio quia vero odio quo natus. </p>
+							<h4>How does writing influence your personal brand?</h4>
+							<p>Lorem Commodi dolorum sint iste nihil eos, expedita magni, doloremque odit quae totam ullam facere eveniet architecto!</p>
+						</div>
+						<a className="btn" href="#">Get started <FaArrowRight /></a>
+					</li>
+					<li className="item">
+						<div className="item-content">
+							<div className="icon-cont tertiary">
+								<BsBoxSeam className="icon" size={28} fill="#9E64FF" />
 							</div>
-							<a className="btn" href="#">Get started <FaArrowRight fill="#69686E" /></a>
-						</li>
-					</ul>
+							<h4>How does writing influence your personal brand?</h4>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio quia vero odio quo natus. </p>
+						</div>
+						<a className="btn" href="#">Get started <FaArrowRight fill="#69686E" /></a>
+					</li>
+				</ul>
 			</Section>
+
+			<div className="services-cta">
+				<div className="content">
+					<Headline
+						title="Travelling as a way of self-discovery and progress"
+						description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud "
+					/>
+					<a href="#" className="btn filled">Get Started</a>
+				</div>
+				<div className="image">
+					<img src="/images/project-image.png" alt="macbook image" />
+				</div>
+			</div>
+
+			<Section>
+				<Headline
+					tagline="Testimonials"
+					title="What the people say about us"
+					description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+				/>
+				<ul className="testimonials-list">
+					<li className="item">
+						<div className="t-card-head">
+							<div className="person-info">
+								<img src="/images/contributors/jonathan pic.png" alt="jonathan picture" />
+								<div>
+									<h5>Jonathan Montero</h5>
+									<p>Position</p>
+								</div>
+							</div>
+							<div className="rate-date">
+								<p>This week</p>
+								<p className="rate">⭐⭐⭐⭐⭐</p>
+							</div>
+						</div>
+
+						<div className="t-card-body">
+							<ImQuotesLeft size={32}  fill="#393644"/>
+							<div className="testimonial">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae natus architecto reiciendis quibusdam ipsa ipsum facilis ex perspiciatis nulla, doloremque reprehenderit blanditiis nemo commodi quia molestias minus possimus vel sit!</p>
+							</div>
+						</div>
+					</li>
+					<li className="item">
+						<div className="t-card-head">
+							<div className="person-info">
+								<img src="/images/contributors/isael pic.png" alt="jonathan picture" />
+								<div>
+									<h5>Isael Diroche</h5>
+									<p>Position</p>
+								</div>
+							</div>
+							<div className="rate-date">
+								<p>This week</p>
+								<p className="rate">⭐⭐⭐⭐⭐</p>
+							</div>
+						</div>
+
+						<div className="t-card-body">
+							<ImQuotesLeft size={32} fill="#393644"/>
+							<div className="testimonial">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae natus architecto reiciendis quibusdam ipsa ipsum facilis ex perspiciatis nulla, doloremque reprehenderit blanditiis nemo commodi quia molestias minus possimus vel sit!</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</Section>
+
 		</main>
 	);
 }
