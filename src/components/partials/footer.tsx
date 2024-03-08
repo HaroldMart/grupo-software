@@ -41,7 +41,7 @@ export function Footer() {
                     <div className="grupo-software">
                         <h5>Main Links</h5>
                         <ul>
-                            <li><a href="#about">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#about">Portfolio</a></li>
                             <li><a href="#about">Services</a></li>
