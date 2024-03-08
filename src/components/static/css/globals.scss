@@ -69,7 +69,38 @@ p {
 	}
 }
 
+.top-navigation {
+	@include flex($justify: space-between, $align: center, $wrap: wrap);
+	background-color: #393644;
+	padding: 10px 72px;
 
+	.adress {
+		color: #D0D5DD;
+		margin-bottom: 0;
+		@include flex($gap: 16px);
+		@include font($size: small);
+
+	}
+
+	.phone-mail {
+		@include flex($gap: 16px);
+
+		.phone, .mail {
+			@include flex($gap: 5px);
+
+			.icon {
+				fill: #D0D5DD;
+
+			}
+			
+			p {
+				@include font($size: small);
+				margin-bottom: 0;
+				color: #D0D5DD;
+			}
+		}
+	}
+}
 
 main {
 	@include flex($justify: flex-start,
