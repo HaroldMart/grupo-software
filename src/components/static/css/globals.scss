@@ -74,6 +74,10 @@ p {
 	background-color: #393644;
 	padding: 10px 72px;
 
+	@include custom-screen(870px) {
+		display: none;
+	}
+
 	.adress {
 		color: #D0D5DD;
 		margin-bottom: 0;
@@ -265,6 +269,7 @@ main {
 			width: 100%;
 			height: 100%;
 			position: relative;
+			z-index: -1;
 
 			img {
 				width: 100%;

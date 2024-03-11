@@ -97,7 +97,7 @@ $shadows: (
   $wrap: nowrap,
   $gap: 0
 ) {
-  display: flex;
+  display: flex !important;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;

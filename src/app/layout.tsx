@@ -6,7 +6,6 @@ import Navbar from "../components/partials/navbar";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
-
 export const metadata: Metadata = {
 	title: "Grupo Software",
 	description: "StarUp GrupoSoftware website",
