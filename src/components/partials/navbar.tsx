@@ -67,7 +67,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`${isOpen ? 'open ' : ''}navbar ${isFixed ? 'fixed' : ''}`}>
+        <nav className={`${isOpen ? '' : 'open '}navbar ${isFixed ? 'fixed' : ''}`}>
             <img src="/images/logo-header.png" alt="navbar logo" className="navbar-logo" />
             <div className='nav-links'>
                 <div className="nav-header">
