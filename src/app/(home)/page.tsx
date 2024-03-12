@@ -10,7 +10,6 @@ import { BsBoxSeam } from "react-icons/bs";
 import { BsBarChart } from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
 import { ImQuotesLeft } from "react-icons/im";
-
 import AboutImagen from '../../../public/images/about-image.png'
 import GroupSvg from '../../../public/images/undraw_programming_re_kg9v.svg'
 
@@ -51,12 +50,10 @@ export default function Page() {
 						<div>
 							<p>We are a digital agency focused on creating exceptional digital experiences for our clients. We specialize in web, mobile and desktop development, delivering innovative and high-quality solutions.</p>
 							<h5>Our approach </h5>
-							<p>Our approach is based on understanding each client's unique needs and delivering customized solutions that drive their online success. We strive to exceed our customers' expectations on every project, focusing on quality, innovation, and customer satisfaction</p>
+							<p>Our approach is based on understanding each client&apos;s unique needs and delivering customized solutions that drive their online success. We strive to exceed our customers&apos; expectations on every project, focusing on quality, innovation, and customer satisfaction</p>
 						</div>
 					</div>
-
 				</div>
-
 
 			</Section>
 
