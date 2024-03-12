@@ -1,4 +1,4 @@
-import "../../components/static/css/partials/footer.scss";
+import "../../static/css/partials/footer.scss";
 import { IoLogoTwitter, IoLogoGithub } from "react-icons/io";
 import { FaFacebookF, FaTelegramPlane, FaPinterest } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";

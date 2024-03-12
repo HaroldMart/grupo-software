@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../components/static/css/globals.scss";
+import "../static/css/globals.scss";
 import { inter } from "../utils/fonts";
 import { Footer } from "../components/partials/footer";
 import Navbar from "../components/partials/navbar";

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import '../components/static/css/components/headline.scss';
+import '../static/css/components/headline.scss';
 
 
 function Tagline({name}: {name?:string}) {
