@@ -30,26 +30,23 @@ const links = [
 export default function NavLinks() {
     const pathname = usePathname();
     return (
-        <div>
-            Nav Links(compoment)
-        </div>
-        // <>
-        //   {links.map((link) => {
-        //     return (
-        //       <Link
-        //         key={link.name}
-        //         href={link.href}
-        //         className={clsx(
-        //           'link',
-        //           {
-        //             'active': pathname === link.href,
-        //           },
-        //         )}
-        //       >
-        //         <p>{link.name}</p>
-        //       </Link>
-        //     );
-        //   })}
-        // </>
+        <>
+          {links.map((link) => {
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={clsx(
+                  'link',
+                  {
+                    'active': pathname === link.href,
+                  },
+                )}
+              >
+                <p>{link.name}</p>
+              </Link>
+            );
+          })}
+        </>
     );
 }

@@ -61,12 +61,12 @@ export function Footer() {
                 <div className="follow">
                     <h5>Follow</h5>
                     <div className="icons">
-                        <a target="blank" href={defaulLinkIcons}><FaFacebookF size={22} /></a>
-                        <a target="blank" href={defaulLinkIcons}><RiInstagramFill size={22} /> </a>
-                        <a target="blank" href={defaulLinkIcons}><IoLogoTwitter size={22} /></a>
-                        <a target="blank" href={defaulLinkIcons}><FaTelegramPlane size={22} /></a>
-                        <a target="blank" href={defaulLinkIcons}><IoLogoGithub size={22} /></a>
-                        <a target="blank" href={defaulLinkIcons}><FaPinterest size={22} /></a>
+                        <a target="blank" title="facebook" href={defaulLinkIcons}><FaFacebookF size={22} /></a>
+                        <a target="blank" title="Instagram" href={defaulLinkIcons}><RiInstagramFill size={22} /> </a>
+                        <a target="blank" title="Twitter" href={defaulLinkIcons}><IoLogoTwitter size={22} /></a>
+                        <a target="blank" title="Telegram" href={defaulLinkIcons}><FaTelegramPlane size={22} /></a>
+                        <a target="blank" title="Github" href={defaulLinkIcons}><IoLogoGithub size={22} /></a>
+                        <a target="blank" title="Pinterest" href={defaulLinkIcons}><FaPinterest size={22} /></a>
                     </div>
                 </div>
             </div>
