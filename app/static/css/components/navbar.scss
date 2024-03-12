@@ -1,9 +1,0 @@
-@import "../mixins.scss";
-
-nav.navbar {
-    height: 155px;
-    @include flex($justify: flex-start, $align: center, $direction: column);
-    padding: 0px 100px;
-    background: var(--White, #fff);
-    box-shadow: 0px 3px 250px 0px rgba(0, 0, 0, 0.15);
-  }

@@ -1,0 +1,204 @@
+@import "../mixins.scss";
+
+.navbar {
+    @include flex($align: center, $justify: space-between);
+    padding: 16px 40px;
+    height: 100px;
+    background-color: #ffffff;
+    transition: backdrop-filter, translate 0.3s ease;
+    z-index: 1000;
+    overflow-x: clip;
+
+    .toggle-menu-button {
+        display: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        width: 48px;
+        height: 100%;
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &.open {
+        .nav-links {
+            transition: all 400ms ease;
+            right: -400px !important;
+        }
+    }
+
+    &.fixed {
+        @include flex($align: center, $justify: space-between);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background-color: #ffffff8e;
+        transition: all 400ms ease;
+    }
+
+    .navbar-logo {
+        width: 248px;
+        height: 62px;
+    }
+
+    .nav-links {
+
+        .links {
+            @include flex($direction: row);
+        }
+
+        .nav-header,
+        .nav-footer {
+            display: none;
+        }
+
+        .link {
+            .a-link {
+
+                p {
+                    color: #6E747C;
+                    margin-bottom: 0;
+                    padding: 6px 20px;
+                }
+
+                &.active {
+
+                    p {
+                        transition: all 200ms ease-in-out;
+                        color: #2F54EB;
+                        border-bottom: 3px solid #2F54EB;
+                    }
+                }
+
+                &:hover {
+                    p {
+                        color: #2F54EB;
+                        transition: all 250ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    @include custom-screen(870px) {
+        position: relative;
+
+        &.fixed {
+            @media (min-width: 870px) {
+                @include flex($align: center, $justify: space-between);
+                width: 100%;
+                position: fixed;
+                top: 0;
+                -webkit-backdrop-filter: blur(15px);
+                backdrop-filter: blur(15px);
+                background-color: #ffffff8e;
+                transition: all 400ms ease;
+            }
+        }
+
+        .nav-links {
+            overflow: hidden;
+            width: min(400px, 100vw);
+            height: 100vh;
+            @include flex($direction: column !important, $justify: space-between !important);
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #323232;
+
+            .links {
+                width: 100%;
+                padding: 24px 20px;
+                @include flex($direction: column !important, $gap: 18px);
+
+                .link {
+
+                    .a-link {
+                        p {
+                            border-radius: 50px;
+                            border-bottom: none !important;
+                            background-color: transparent;
+                            padding: 20px 0 !important;
+                            font-weight: 600 !important;
+                        }
+
+                        &.active {
+                            p {
+                                background-color: #006eff1e;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .nav-header,
+            .nav-footer {
+                display: block !important;
+                @include flex($align: flex-end, $justify: flex-end);
+
+                p {
+                    color: #ffffff;
+                    margin-bottom: 5px;
+                    @include font($size: small);
+                }
+            }
+
+            .nav-header {
+                height: 100px;
+                width: 100%;
+                display: flex !important;
+                padding: 0 25px;
+                @include flex($align: center, $justify: space-between);
+
+                img {
+                    width: 48px;
+
+                }
+
+                .close-button {
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    width: 48px;
+                    height: 100%;
+
+                    .icon {
+                        width: 36px;
+                        height: 36px;
+                        color: #ffffff;
+                    }
+
+                }
+            }
+
+            .link {
+                width: 100%;
+                // padding: 20px 10px !important;
+
+                .a-link {
+                    width: 100%;
+
+                    p {
+                        @include flex ($justify: center);
+                        background-color: #2f55eb3f;
+                        border: none;
+                        width: 100%;
+                        height: 100%;
+                        // height: 64px;
+                    }
+                }
+
+            }
+        }
+
+        .toggle-menu-button {
+            display: block;
+        }
+    }
+
+}
